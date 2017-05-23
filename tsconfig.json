@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "es2015",
+      "es2016"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "isolatedModules": false,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "skipLibCheck": false,
+    "strictNullChecks": true,
+    "removeComments": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "types": [
+      "storejs",
+      "jest",
+      "vue-typescript-import-dts"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

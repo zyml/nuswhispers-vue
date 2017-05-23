@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Confession renders correctly 1`] = `
+<article data-server-rendered="true" class="confession">
+    <box>
+        <header class="header">
+            <div class="categories">
+                No Category
+            </div>
+            <div class="social">
+                <a target="_blank" rel="nofollow norel" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fnuswhispers.com%2Fconfession%2F1">
+                    <icon id="social-twitter" class="actionIcon"></icon>
+                </a>
+                <a target="_blank" rel="nofollow noopener" href="https://www.facebook.com/dialog/share?app_id=1577825682475577&amp;type=dialog&amp;href=http%3A%2F%2Fnuswhispers.com%2Fconfession%2F1">
+                    <icon id="social-facebook" class="actionIcon"></icon>
+                </a>
+            </div>
+        </header>
+        <div class="content">
+            <router-link to="/confession/1">#1:</router-link>
+            <p class="contentInject">Hello World!</p>
+            <!---->
+            <p><a target="_blank" rel="nofollow noopener" href="https://www.facebook.com/nuswhispers/posts/1">View on Facebook</a></p>
+        </div>
+        <footer class="footer">
+            <div class="timestamp">
+                <icon id="time" class="footerIcon"></icon>
+                2 days ago
+            </div>
+            <div class="actions">
+                <a href="https://www.facebook.com/nuswhispers/posts/1" class="action">
+                    <icon id="message" class="footerIcon"></icon>
+                    0
+                </a>
+                <a href="https://www.facebook.com/nuswhispers/posts/1" class="action">
+                    <icon id="thumbs-up" class="footerIcon"></icon>
+                    0
+                </a>
+            </div>
+        </footer>
+    </box>
+</article>
+`;

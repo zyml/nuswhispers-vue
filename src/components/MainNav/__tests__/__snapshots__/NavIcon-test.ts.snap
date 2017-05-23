@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavIcon renders correctly 1`] = `
+<router-link data-server-rendered="true">
+    <icon class="icon"></icon>
+</router-link>
+`;

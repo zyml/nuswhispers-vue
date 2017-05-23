@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryList renders correctly with categories 1`] = `
+<div data-server-rendered="true">
+    <router-link to="/category/1">Foo</router-link><span>, </span>
+    <router-link to="/category/2">Bar</router-link>
+    <!---->
+</div>
+`;
+
+exports[`CategoryList renders correctly with no categories 1`] = `
+<div data-server-rendered="true">
+    No Category
+</div>
+`;
+
+exports[`CategoryList renders correctly with one category 1`] = `
+<div data-server-rendered="true">
+    <router-link to="/category/1">Foo</router-link>
+    <!---->
+</div>
+`;

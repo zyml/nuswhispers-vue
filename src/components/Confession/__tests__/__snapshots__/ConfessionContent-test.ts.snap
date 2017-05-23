@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfessionContent renders correctly with HTML tags 1`] = `<p data-server-rendered="true">Hello! <a href="/tag/foo">#foo</a> &lt;script&gt;console.log(&quot;YOLO&quot;);&lt;/script&gt;</p>`;
+
+exports[`ConfessionContent renders correctly with URLs 1`] = `<p data-server-rendered="true">Hello! <a rel="noopener noreferrer" href="https://www.google.com.sg/" target="_blank">https://www.google.com.sg/</a></p>`;
+
+exports[`ConfessionContent renders correctly with normal text 1`] = `<p data-server-rendered="true">Hello World!</p>`;
+
+exports[`ConfessionContent renders correctly with tags 1`] = `<p data-server-rendered="true">Hello! <a href="/tag/firstworldproblems">#firstworldproblems</a></p>`;

@@ -1,0 +1,13 @@
+.DS_Store
+.env
+.yarnclean
+*.log
+coverage
+build
+dist
+node_modules
+stats.json
+
+# IDEs
+.idea
+.sublime-*

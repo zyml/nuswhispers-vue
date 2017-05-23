@@ -1,0 +1,123 @@
+{
+  "name": "nuswhispers-vue",
+  "version": "1.0.0",
+  "description": "Vue.js port of NUSWhispers' front-end application.",
+  "author": "Melvin Lee <zy@zy.sg>",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node server.js",
+    "build": "npm run clean && npm run build:client && npm run build:server",
+    "build:client": "cross-env NODE_ENV=production webpack --config ./internals/webpack/webpack.client.js --progress --hide-modules",
+    "build:server": "cross-env NODE_ENV=production webpack --config ./internals/webpack/webpack.server.js --progress --hide-modules",
+    "clean": "rm -rf ./dist/*",
+    "test": "jest",
+    "lint": "npm run lint:js && npm run lint:ts",
+    "lint:js": "eslint .",
+    "lint:ts": "tslint 'src/**/*.ts'",
+    "watch": "node server.js"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zyml/nuswhispers-vue"
+  },
+  "dependencies": {
+    "autosize": "^3.0.21",
+    "axios": "^0.16.1",
+    "camelcase-keys-recursive": "^0.8.2",
+    "date-fns": "^1.28.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.0",
+    "handlebars": "^4.0.0",
+    "lodash": "^4.17.4",
+    "lru-cache": "^4.0.2",
+    "memory-fs": "^0.4.1",
+    "normalize.css": "^7.0.0",
+    "normalizr": "^3.2.1",
+    "store": "^1.3.1",
+    "vue": "^2.3.3",
+    "vue-class-component": "^5.0.1",
+    "vue-infinite-scroll": "^2.0.1",
+    "vue-property-decorator": "^5.0.1",
+    "vue-recaptcha": "^0.4.0",
+    "vue-router": "^2.5.3",
+    "vue-server-renderer": "^2.3.3",
+    "vuex": "^2.3.1",
+    "webfontloader": "^1.6.27"
+  },
+  "devDependencies": {
+    "@types/autosize": "^3.0.4",
+    "@types/jest": "^19.2.3",
+    "@types/lodash": "^4.14.52",
+    "@types/storejs": "^1.3.1",
+    "@types/webfontloader": "^1.6.28",
+    "autoprefixer": "^7.0.1",
+    "awesome-typescript-loader": "^3.1.3",
+    "chalk": "^1.1.3",
+    "copy-webpack-plugin": "^4.0.1",
+    "cross-env": "^5.0.0",
+    "css-loader": "^0.28.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eventsource-polyfill": "^0.9.6",
+    "exports-loader": "^0.6.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "favicons-webpack-plugin": "^0.0.7",
+    "file-loader": "^0.11.1",
+    "handlebars-loader": "^1.4.0",
+    "html-webpack-plugin": "^2.26.0",
+    "jest": "^20.0.1",
+    "js-beautify": "^1.6.14",
+    "json-loader": "^0.5.4",
+    "style-loader": "^0.17.0",
+    "sw-precache-webpack-plugin": "^0.11.0",
+    "ts-jest": "^20.0.3",
+    "tslint": "^5.2.0",
+    "tslint-loader": "^3.3.0",
+    "typescript": "^2.1.5",
+    "url-loader": "^0.5.7",
+    "vue-loader": "^12.0.0",
+    "vue-style-loader": "^3.0.0",
+    "vue-template-compiler": "^2.3.3",
+    "vue-template-es2015-compiler": "^1.5.2",
+    "vue-typescript-import-dts": "^3.1.0",
+    "webpack": "^2.2.0",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-hot-middleware": "^2.15.0",
+    "webpack-merge": "^4.1.0",
+    "webpack-node-externals": "^1.5.4"
+  },
+  "engines": {
+    "node": ">= 7.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testRegex": "(/__tests__/.*(test|spec))\\.ts$",
+    "moduleFileExtensions": [
+      "vue",
+      "ts",
+      "js"
+    ],
+    "moduleNameMapper": {
+      "^vue$": "<rootDir>/node_modules/vue/dist/vue.common.js"
+    },
+    "snapshotSerializers": [
+      "<rootDir>/internals/jest/html-snapshot-serializer.js"
+    ],
+    "transform": {
+      "^.+\\.vue$": "<rootDir>/internals/jest/vue-preprocessor.js",
+      "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{js,ts,vue}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/internals/",
+      "/node_modules/",
+      "(/__tests__/.*(test|spec))\\.(js|ts)$"
+    ]
+  }
+}
