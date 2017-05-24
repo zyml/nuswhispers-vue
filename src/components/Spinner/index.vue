@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.container">
-    <div :class="[$style.spinner, $style.heart]" />
+    <div :class="$style.heart" />
   </div>
 </template>
 
@@ -9,16 +9,14 @@
   margin: 2rem 1rem;
   text-align: center;
 }
-.spinner {
+
+.heart {
+  animation: heart-animate 2s ease-in-out infinite;
   box-sizing: border-box;
   display: inline-block;
   height: 48px;
   position: relative;
   width: 48px;
-}
-
-.heart {
-  animation: heart-animate 2s ease-in-out infinite;
 }
 
 .heart:before {
