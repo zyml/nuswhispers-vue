@@ -8,6 +8,9 @@ import Confession from '../index.vue';
 
 Vue.use(Vuex);
 
+// Mock current date to 2017-05-03 00:00:00.
+Date.now = jest.fn(() => 1493769600);
+
 describe('Confession', () => {
   const renderer = createRenderer();
 
@@ -19,7 +22,7 @@ describe('Confession', () => {
           categories: [],
           confessionId: 1,
           content: 'Hello World!',
-          createdAt: format(subDays(new Date(), 3), 'YYYY-MM-DD HH:mm:ss'),
+          createdAt: '2017-05-01 00:00:00',
           facebookInformation: '1',
           favourites: [],
           fbCommentCount: 0,
