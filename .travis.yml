@@ -1,0 +1,17 @@
+sudo: false
+
+language: node_js
+
+node_js:
+  - stable
+
+cache:
+  yarn: true
+  directories:
+  - node_modules
+
+install: yarn
+
+script: yarn test -- --coverage
+
+after_success: yarn run coveralls
