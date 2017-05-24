@@ -1,4 +1,9 @@
 # NUSWhispers (Vue Port)
+
+[![Dependency Status](https://gemnasium.com/zyml/nuswhispers-vue.svg)](https://gemnasium.com/zyml/nuswhispers-vue)
+[![Build Status](https://travis-ci.org/zyml/nuswhispers-vue.svg)](https://travis-ci.org/zyml/nuswhispers-vue)
+[![Coverage Status](https://coveralls.io/repos/github/zyml/nuswhispers-vue/badge.svg)](https://coveralls.io/github/zyml/nuswhispers-vue)
+
 > Vue + TypeScript port of NUSWhispers' front-end application.
 
 A personal experiment to replicate [NUSWhispers](https://www.nuswhispers.com)'s front-end application using [Vue](https://vuejs.org).
@@ -35,7 +40,7 @@ A personal experiment to replicate [NUSWhispers](https://www.nuswhispers.com)'s 
 - [x] Webpack 2
 - [x] Code Splitting
 - [x] Jest
-- [ ] Travis CI
+- [x] Travis CI
 - [ ] Code Coverage
 - [x] Service Workers
 - [ ] E2E
