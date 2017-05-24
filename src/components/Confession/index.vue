@@ -95,6 +95,7 @@
 }
 
 .contentImage {
+  display: block;
   height: auto;
   max-width: 100%;
   padding-top: 1rem;
