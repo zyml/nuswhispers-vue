@@ -4,6 +4,7 @@ import Component from 'vue-class-component';
 import VueRecaptcha from 'vue-recaptcha';
 import meta from '../../mixins/meta';
 import title from '../../mixins/title';
+import autofix from '../../utils/autofix';
 import CategorySelect from './CategorySelect';
 import ImageUpload from './ImageUpload';
 import StoryTextArea from './StoryTextArea';
@@ -81,7 +82,7 @@ export default class Submit extends Vue {
     this.$store.dispatch('submitConfession', {
       captcha: this.token,
       categories: this.categories,
-      content: this.story,
+      content: autofix(this.story),
       image: this.image,
     })
     .then(() => {

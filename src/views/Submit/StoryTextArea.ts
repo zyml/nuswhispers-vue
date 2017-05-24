@@ -1,17 +1,10 @@
 import autosize from 'autosize';
-import flow from 'lodash/flow';
 import Vue from 'vue';
 import { Component, Prop } from 'vue-property-decorator';
 import escapeHtml from '../../utils/escape-html';
 
-const autofix = (content: string) => {
-  return String(content)
-    .replace(/nus\s*whispers?\b/gi, 'NUSWhispers')
-    .replace(/nus\s*mods?\b/gi, 'NUSMods');
-};
-
 const highlightTags = (content: string): string => {
-  const tags = flow(escapeHtml, autofix)(content).split(/(#\w+)/);
+  const tags = escapeHtml(content).split(/(#\w+)/);
   let formatted = '';
 
   tags.map((tag) => {
