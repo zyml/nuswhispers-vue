@@ -1,5 +1,5 @@
 # NUSWhispers (Vue Port)
-
+[![GitHub stars](https://img.shields.io/github/stars/zyml/nuswhispers-vue.svg)](https://github.com/zyml/nuswhispers-vue/stargazers)
 [![Dependency Status](https://gemnasium.com/zyml/nuswhispers-vue.svg)](https://gemnasium.com/zyml/nuswhispers-vue)
 [![Build Status](https://travis-ci.org/zyml/nuswhispers-vue.svg)](https://travis-ci.org/zyml/nuswhispers-vue)
 [![Coverage Status](https://coveralls.io/repos/github/zyml/nuswhispers-vue/badge.svg)](https://coveralls.io/github/zyml/nuswhispers-vue)
@@ -9,6 +9,13 @@
 A personal experiment to replicate [NUSWhispers](https://www.nuswhispers.com)'s front-end application using [Vue](https://vuejs.org).
 
 **Warning:** This is a WORK IN PROGRESS! It is undecided whether this web application will replace the existing one.
+
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/1495648/26460491/6015e780-41ac-11e7-9ced-db8496e6d9ff.png" alt="Screenshot" width="100%" />
+  <strong><a target="_blank" href="http://nuswhispers-vue.herokuapp.com/">Live Demo</a></strong>
+</p>
+
+---
 
 ## Feature Parity Checklist
 - [x] Core Layout
@@ -47,6 +54,7 @@ A personal experiment to replicate [NUSWhispers](https://www.nuswhispers.com)'s 
 - [x] Yarn
 - [x] Server-side Rendering (SSR)
 - [x] Title / Meta Management
+- [ ] > 90 [Lighthouse](https://developers.google.com/web/tools/lighthouse/) Score
 
 ## Requirements
 - Node 7.0+
