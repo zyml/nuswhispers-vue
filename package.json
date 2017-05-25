@@ -4,7 +4,7 @@
   "description": "Vue.js port of NUSWhispers' front-end application.",
   "author": "Melvin Lee <zy@zy.sg>",
   "scripts": {
-    "prestart": "npm run build",
+    "postinstall": "npm run build",
     "start": "cross-env NODE_ENV=production node server.js",
     "build": "npm run clean && npm run build:client && npm run build:server",
     "build:client": "cross-env NODE_ENV=production webpack --config ./internals/webpack/webpack.client.js --progress --hide-modules",
