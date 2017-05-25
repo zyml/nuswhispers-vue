@@ -25,6 +25,6 @@ export default class ConfessionComponent extends Vue {
 
   get humanCreatedAt(): string {
     // Pad a 'Z' at the end to set it as UTC (which is returned from the API).
-    return distanceInWordsStrict(new Date(), parse(this.item.createdAt + 'Z'), { addSuffix: true });
+    return distanceInWordsStrict(Date.now(), parse(this.item.createdAt + 'Z'), { addSuffix: true });
   }
 }

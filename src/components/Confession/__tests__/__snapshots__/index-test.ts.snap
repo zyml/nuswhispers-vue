@@ -25,7 +25,7 @@ exports[`Confession renders correctly 1`] = `
         <footer class="footer">
             <div class="timestamp">
                 <icon id="time" class="footerIcon"></icon>
-                23 days ago
+                2 days ago
             </div>
             <div class="actions">
                 <a href="https://www.facebook.com/nuswhispers/posts/1" class="action">

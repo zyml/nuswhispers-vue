@@ -9,7 +9,7 @@ import Confession from '../index.vue';
 Vue.use(Vuex);
 
 // Mock current date to 2017-05-03 00:00:00.
-Date.now = jest.fn(() => 1493769600);
+Date.now = jest.fn(() => 1493769600000);
 
 describe('Confession', () => {
   const renderer = createRenderer();
