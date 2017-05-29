@@ -86,10 +86,40 @@ module.exports = (env = process.env) => {
         minChunks: Infinity,
       }),
       new SWPrecachePlugin({
-        cacheId: 'vue-hn',
+        cacheId: 'nuswhispers-vue',
         filename: 'service-worker.js',
         dontCacheBustUrlsMatching: /./,
-        staticFileGlobsIgnorePatterns: [/index\.html$/, /\.map$/],
+        staticFileGlobsIgnorePatterns: [/index\.template\.html$/, /\.json$/, /\.map$/],
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/www\.nuswhispers\.com\/api/,
+            handler: 'networkFirst',
+          },
+          {
+            urlPattern: '/',
+            handler: 'networkFirst',
+          },
+          {
+            urlPattern: /\/(latest|popular|success|policy)/,
+            handler: 'networkFirst',
+          },
+          {
+            urlPattern: '/confession/:id',
+            handler: 'networkFirst',
+          },
+          {
+            urlPattern: '/category/:id',
+            handler: 'networkFirst',
+          },
+          {
+            urlPattern: '/tag/:id',
+            handler: 'networkFirst',
+          },
+          {
+            urlPattern: '/search/:id',
+            handler: 'networkFirst',
+          },
+        ],
       })
     );
   }
