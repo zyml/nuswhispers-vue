@@ -16,33 +16,25 @@ interface ParamsPayload {
   list: string[];
 }
 
-function UPDATE_ENTITIES(state: State, entities: any) {
+const concat = (type: string) => (state: State, list: string[]) => state[type] = state[type].concat(list);
+
+const updateListsByParam = (type: string) => (state: State, payload: ParamsPayload) =>
+  state[type][payload.id] = (state[type][payload.id] || []).concat(payload.list);
+
+const updateEntities = (state: State, entities: any) => {
   Object
     .keys(entityMapping)
     .map((key) => {
       state[key] = { ...state[key], ...entities[entityMapping[key]] };
     });
-}
-
-const concat = (type: string) => (state: State, list: string[]) => state[type] = state[type].concat(list);
-
-const UPDATE_FEATURED = concat('featured');
-const UPDATE_LATEST = concat('latest');
-const UPDATE_POPULAR = concat('popular');
-
-const updateListsByParam = (type: string) => (state: State, payload: ParamsPayload) =>
-  state[type][payload.id] = (state[type][payload.id] || []).concat(payload.list);
-
-const UPDATE_LISTS_BY_CATEGORY = updateListsByParam('listsByCategory');
-const UPDATE_LISTS_BY_TAG = updateListsByParam('listsByTag');
-const UPDATE_LISTS_BY_KEYWORD = updateListsByParam('listsByKeyword');
+};
 
 export default {
-  UPDATE_ENTITIES,
-  UPDATE_FEATURED,
-  UPDATE_LATEST,
-  UPDATE_LISTS_BY_CATEGORY,
-  UPDATE_LISTS_BY_KEYWORD,
-  UPDATE_LISTS_BY_TAG,
-  UPDATE_POPULAR,
+  updateEntities,
+  updateFeatured: concat('featured'),
+  updateLatest: concat('latest'),
+  updateListsByCategory: updateListsByParam('listsByCategory'),
+  updateListsByKeyword: updateListsByParam('listsByKeyword'),
+  updateListsByTag: updateListsByParam('listsByTag'),
+  updatePopular: concat('popular'),
 };

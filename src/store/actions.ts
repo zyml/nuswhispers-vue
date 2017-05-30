@@ -13,6 +13,7 @@ import {
   postConfession,
 } from '../api/confessions';
 import { fetchTags } from '../api/tags';
+import capitalize from '../utils/capitalize';
 import State from './state';
 
 type FetchFunction = (count?: number, offset?: number) => Promise<any>;
@@ -25,8 +26,8 @@ const getNext = (fetch: FetchFunction, type: string, skipIfNotEmpty?: boolean) =
     }
 
     return fetch(ctx.state.itemsPerPage, ctx.state[type].length).then((payload) => {
-      ctx.commit('UPDATE_ENTITIES', payload.entities);
-      ctx.commit(`UPDATE_${type.toUpperCase()}`, payload.result);
+      ctx.commit('updateEntities', payload.entities);
+      ctx.commit(`update${capitalize(type)}`, payload.result);
     });
   };
 };
@@ -44,7 +45,7 @@ const getCategories = (ctx: ActionContext<State, any>) => {
   }
 
   return fetchCategories().then((payload) => {
-    ctx.commit('UPDATE_ENTITIES', payload.entities);
+    ctx.commit('updateEntities', payload.entities);
   });
 };
 
@@ -54,7 +55,7 @@ const getTags = (ctx: ActionContext<State, any>) => {
   }
 
   return fetchTags(9).then((payload) => {
-    ctx.commit('UPDATE_ENTITIES', payload.entities);
+    ctx.commit('updateEntities', payload.entities);
   });
 };
 
@@ -68,8 +69,8 @@ const getByNext = (fetch: FetchByFunction, type: string, skipIfNotEmpty?: boolea
     }
 
     return fetch(id, ctx.state.itemsPerPage, count).then((payload) => {
-      ctx.commit('UPDATE_ENTITIES', payload.entities);
-      ctx.commit(`UPDATE_${snakeCase(type).toUpperCase()}`, { id, list: payload.result });
+      ctx.commit('updateEntities', payload.entities);
+      ctx.commit(`update${capitalize(type)}`, { id, list: payload.result });
     });
   };
 };
@@ -89,7 +90,7 @@ const getById = (ctx: ActionContext<State, any>, id: string) => {
   }
 
   return fetchById(id).then((payload) => {
-    ctx.commit('UPDATE_ENTITIES', payload.entities);
+    ctx.commit('updateEntities', payload.entities);
   });
 };
 
