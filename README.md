@@ -12,7 +12,7 @@ A personal experiment to replicate [NUSWhispers](https://www.nuswhispers.com)'s 
 
 <p align="center">
   <img src="https://cloud.githubusercontent.com/assets/1495648/26460491/6015e780-41ac-11e7-9ced-db8496e6d9ff.png" alt="Screenshot" width="100%" />
-  <strong><a target="_blank" href="http://nuswhispers-vue.herokuapp.com/">Live Demo</a></strong>
+  <strong><a target="_blank" href="https://nuswhispers-vue.herokuapp.com/">Live Demo</a></strong>
 </p>
 
 ---
