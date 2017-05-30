@@ -20,7 +20,7 @@ function UPDATE_ENTITIES(state: State, entities: any) {
   Object
     .keys(entityMapping)
     .map((key) => {
-      state[key] = Object.assign({}, state[key], entities[entityMapping[key]]);
+      state[key] = { ...state[key], ...entities[entityMapping[key]] };
     });
 }
 
@@ -41,8 +41,8 @@ export default {
   UPDATE_ENTITIES,
   UPDATE_FEATURED,
   UPDATE_LATEST,
-  UPDATE_POPULAR,
   UPDATE_LISTS_BY_CATEGORY,
-  UPDATE_LISTS_BY_TAG,
   UPDATE_LISTS_BY_KEYWORD,
+  UPDATE_LISTS_BY_TAG,
+  UPDATE_POPULAR,
 };

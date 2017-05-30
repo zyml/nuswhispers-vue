@@ -36,14 +36,14 @@ const tags = (state: State): Tag[] => state.tags;
 
 export default {
   categories,
-  categoryById,
   categoriesByIds,
+  categoryById,
   featured,
   latest,
+  listByCategory,
+  listById,
+  listByKeyword,
+  listByTag,
   popular,
   tags,
-  listByCategory,
-  listByTag,
-  listByKeyword,
-  listById,
 };

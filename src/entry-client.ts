@@ -38,8 +38,8 @@ router.beforeResolve((to, from, next) => {
   Promise.all(activated.map((c) => {
     if ((c as ASyncComponent).fetchInitialData) {
       return (c as ASyncComponent).fetchInitialData({
-        store,
         route: to,
+        store,
       });
     }
   }))

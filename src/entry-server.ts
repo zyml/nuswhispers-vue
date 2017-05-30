@@ -21,8 +21,8 @@ export default (context: any) => {
         ...matchedComponents.map((c) => {
           if ((c as ASyncComponent).fetchInitialData) {
             return (c as ASyncComponent).fetchInitialData({
-              store,
               route: router.currentRoute,
+              store,
             });
           }
         }),
