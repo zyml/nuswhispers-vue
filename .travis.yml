@@ -14,6 +14,8 @@ before_install: export TZ=UTC
 
 install: yarn
 
-script: yarn test -- --coverage
+script:
+  - yarn run lint
+  - yarn test -- --coverage
 
 after_success: yarn run coveralls
