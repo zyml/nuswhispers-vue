@@ -32,7 +32,6 @@ module.exports = (env = process.env) => {
       new webpack.optimize.UglifyJsPlugin({
         compress: isProduction(env) ? { warnings: false } : false,
       }),
-      new webpack.optimize.OccurrenceOrderPlugin(),
       new FaviconPlugin({
         logo: './internals/templates/favicon.png',
         prefix: 'icons/',
